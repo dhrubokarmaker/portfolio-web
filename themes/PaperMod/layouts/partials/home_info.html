@@ -109,8 +109,9 @@
       </div>
 </div>
 </div>
-<script src async="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
 <script>
+  $(document).ready(function () {
     var acc = document.getElementsByClassName("workexperience");
     var i;
     for (i = 0; i < acc.length; i++) {
@@ -128,9 +129,8 @@
       scrollTop: $(".experiences").offset().top},
       'slow');
       });
-
-      
-      
     }
+});
+    
     </script>
 {{- end -}}
