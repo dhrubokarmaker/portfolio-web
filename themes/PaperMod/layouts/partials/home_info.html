@@ -1,0 +1,137 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div class = "photo">
+    {{- if .imageUrl -}}
+    {{- $img := "" }}
+    {{- if not (urls.Parse .imageUrl).IsAbs }}
+        {{- $img = resources.Get .imageUrl }}
+    {{- end }}
+    {{- if $img }}
+        {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+        {{- if hugo.IsExtended -}}
+            {{- $processableFormats = $processableFormats | append "webp" -}}
+        {{- end -}}
+        {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+        {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+            {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+            {{- else if .imageHeight }}
+                {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+            {{ else if .imageWidth }}
+                {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+            {{ else }}
+                {{- $img = $img.Resize "150x150" }}
+            {{- end }}
+        {{- end }}
+        <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+    {{- else }}
+    <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+        height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+    {{- end }}
+    {{- end }}
+    </div>
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" site.Params.socialIcons }}
+    </footer>
+ 
+  </div>
+ <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
+</article>
+<div class="experiences">
+<h1>Work Experience <span> 📈 </span> </h1>
+<div  class ="workexperience">
+  <div class="icon"></div>
+    <header class="entry-header">
+        <h2>
+          Software Developer In Test Intern
+        </h2>
+        <p>
+          Student Price Card Ltd.
+        <p>
+      </header>
+    <div class="experience">
+        <!-- <header class="entry-header">
+          <h2>
+            Quality Assurance Intern
+          </h2>
+          <p>
+            Student Price Card Ltd.
+          <p>
+        </header> -->
+        <div class="entry-content">
+          <p>&#8226 Developed and thoroughly documented a robust end-to-end website testing framework using Selenium.</p>
+          <p>&#8226 Wrote reusable Python test code that covered 90% of the cases required for regression testing.</p>
+          <p>&#8226 Facilitated automatic parallel testing in different browsers using Selenium Grid.</p>
+          <p>&#8226 Integrated the tests in the CI/CD pipeline using Docker and Google Cloud Run feature for stable deployment.</p>
+        </div>
+        <footer class="entry-footer">
+          Vaughan, ON
+        </footer>
+        <!-- <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a> -->
+      </div>
+</div>
+<div  class ="workexperience">
+  <div class="icon"></div>
+    <header class="entry-header">
+        <h2>
+          Undergraduate Teaching Assistant
+        </h2>
+        <p>
+          University of British Columbia
+        <p>
+      </header>
+    <div class="experience">
+        <!-- <header class="entry-header">
+          <h2>
+            Quality Assurance Intern
+          </h2>
+          <p>
+            Student Price Card Ltd.
+          <p>
+        </header> -->
+        <div class="entry-content">
+          <p>&#8226 Mentored students on Java feature development, testing, and debugging, focusing on object-oriented design.</p>
+          <p>&#8226 Hosted office hours so that students develop a good understanding of core software engineering principles.</p>
+          <p>&#8226 Attained 100% favorable rating from students who received my guidance.</p>
+        </div>
+        <footer class="entry-footer">
+          Vancouver, BC
+        </footer>
+        <!-- <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a> -->
+      </div>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    var acc = document.getElementsByClassName("workexperience");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("mouseover", function() {
+        var panel = this.childNodes[2];
+            panel.style.maxHeight = panel.scrollHeight + 'px'
+            panel.style.opacity = '1'
+      });
+      acc[i].addEventListener("mouseout", function() {
+        var panel = this.childNodes[2];
+        panel.style.maxHeight = 0;
+      });
+      $(".ca3-scroll-down-link").on("click",function(event) {
+      $('html,body').animate({
+      scrollTop: $(".experiences").offset().top},
+      'slow');
+      });
+
+      
+      
+    }
+    </script>
+{{- end -}}
