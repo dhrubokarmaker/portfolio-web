@@ -54,19 +54,25 @@
    .icon:after {
     /* display: inline-block; */
     content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 10px;
     color: var(--primary);
     float: right;
     filter: brightness(150%)
   }
   .workexperience:hover > .icon:after{
     content: '\2212';
+    font-size: 10px;
     color: var(--primary);
   }
    .workexperience:hover{
     transition: filter 300ms ease-in;
     filter: brightness(110%);
     cursor: pointer
+   }
+
+   .arrowcontainer{
+    display: flex;
+    cursor: pointer;
    }
 
   .post-entry:hover{

@@ -42,7 +42,8 @@
     </footer>
  
   </div>
- <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+  <div class="arrowcontainer"> <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a></div>
+
 
 </article>
 <div class="experiences">
@@ -124,10 +125,10 @@
         var panel = this.childNodes[2];
         panel.style.maxHeight = 0;
       });
-      $(".ca3-scroll-down-link").on("click",function(event) {
+      $(".arrowcontainer").on("click",function(event) {
       $('html,body').animate({
       scrollTop: $(".experiences").offset().top},
-      'slow');
+      'smooth');
       });
     }
 });
