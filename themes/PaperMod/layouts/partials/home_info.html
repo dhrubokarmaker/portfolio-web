@@ -125,10 +125,12 @@
         var panel = this.childNodes[2];
         panel.style.maxHeight = 0;
       });
+      
       $(".arrowcontainer").on("click",function(event) {
-      $('html,body').animate({
-      scrollTop: $(".experiences").offset().top},
-      'smooth');
+      // $('html,body').animate({
+      // scrollTop: $(".experiences").offset().top},
+      // 'smooth');
+      document.getElementsByClassName("experiences")[0].scrollIntoView({behavior:"smooth",block:"start"});
       });
     }
 });
