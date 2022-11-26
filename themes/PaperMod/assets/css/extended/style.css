@@ -12,10 +12,12 @@
   }
   .entry-header{
     width: fit-content;
+    overflow: visible !important;
   }
 
   .first-entry .entry-content{
     text-align: center;
+    overflow: visible !important;
   }
 
   
