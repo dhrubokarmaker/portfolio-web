@@ -20,8 +20,8 @@
 }
 
 .first-entry .entry-content {
-    margin: 14px 0;
-    font-size: 16px;
+    /* margin: 14px 0; */
+    font-size: 15px;
     -webkit-line-clamp: 3;
 }
 
