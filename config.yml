@@ -63,8 +63,8 @@ params:
     title: Dhrubo Karmaker
     subtitle: "Computer Science & Statistcs @ UBC"
     imageUrl: "dp.jpg"
-    imageWidth: 500
-    imageHeight: 500
+    imageWidth: 600
+    imageHeight: 600
     imageTitle: my image
     buttons:
       - name: Resume
