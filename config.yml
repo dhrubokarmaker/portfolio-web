@@ -16,7 +16,7 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
+  title: Dhrubo Karmaker'r portfolio
   description: "ExampleSite description"
   keywords: [Blog, Portfolio, PaperMod]
   author: ""
