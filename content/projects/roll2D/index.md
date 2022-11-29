@@ -38,4 +38,5 @@ cover:
 #     appendFilePath: true # to append file path to Edit link
 ---
 
-I re-created a really popular Nokia game from early 2000s - Roll2D. The game is written in Lua where I implemented the game mechanics from scratch. The goal of the game is simple - SURVIVE! You can enjoy a webapp version of the game [here.](https://roll2d.netlify.app/)
+I re-created a really popular Nokia game from early 2000s - Roll2D. The game is written in Lua where I implemented the game mechanics from scratch. The goal of the game is simple - SURVIVE! 
+The game currently only works on desktop cause you need keyboard controls. You can enjoy a webapp version of the game [here.](https://roll2d.netlify.app/) 
