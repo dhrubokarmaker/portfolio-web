@@ -68,7 +68,7 @@ params:
     imageTitle: my image
     buttons:
       - name: Resume
-        url: "DhruboFullStackResume.pdf"
+        url: "DhruboKarmakerFullStackResume.pdf"
 
   # home-info mode
   homeInfoParams:
