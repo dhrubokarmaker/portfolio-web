@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowWordCount: false
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-summary: "A full-stack expense management software made using React,Express & MongoDB"
+summary: "A full-stack expense management software"
 description: ""
 cover:
     image: "cash.png" # image path/url
