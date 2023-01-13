@@ -68,7 +68,7 @@ params:
     imageTitle: my image
     buttons:
       - name: Resume
-        url: "DhruboKarmakerResume'22.pdf"
+        url: "DhruboKarmakerResume2022.pdf"
 
   # home-info mode
   homeInfoParams:
@@ -119,7 +119,7 @@ menu:
   main:
     - identifier: resume
       name: resume
-      url: ./DhruboKarmakerResume'22.pdf
+      url: ./DhruboKarmakerResume2022.pdf
       weight: 10
     - identifier: projects
       name: projects
