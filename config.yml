@@ -1,6 +1,6 @@
 baseURL: https://dhrubokarmaker.netlify.app
 languageCode: en-us
-title:  Dhrubo Karmaker
+title: Dhrubo Karmaker
 theme: "PaperMod"
 
 enableRobotsTXT: true
@@ -42,7 +42,6 @@ params:
   showtoc: false
   tocopen: false
 
-
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
@@ -68,7 +67,7 @@ params:
     imageTitle: my image
     buttons:
       - name: Resume
-        url: "DhruboKarmakerResume2022.pdf"
+        url: "DhruboKarmakerResumeS24.pdf"
 
   # home-info mode
   homeInfoParams:
@@ -114,23 +113,22 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content","tech"]
+    keys: ["title", "permalink", "summary", "content", "tech"]
 menu:
   main:
     - identifier: resume
       name: resume
-      url: ./DhruboKarmakerResume2022.pdf
+      url: ./DhruboKarmakerResumeS24.pdf
       weight: 10
     - identifier: projects
       name: projects
       url: /projects/
       weight: 20
-   
+
     - identifier: about
       name: about
       url: /about/
       weight: 30
-    
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
